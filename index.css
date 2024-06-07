@@ -1,3 +1,13 @@
+:root{
+    scrollbar-width: thin;
+    scrollbar-color:  #48e #222;
+    --Backgound-black: #111;
+    --letter-color: #fff;
+    --Backgound-planing: #77e;
+    --orange: #ff8022;
+    --blue: #48e;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -6,7 +16,11 @@ body{
 
 /* START HEADER */
 .header{
-    background-color: #111;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    box-shadow: 0 0 3px var(--Backgound-black);
+    background-color: var(--Backgound-black);
     height: 50px;
     display: flex;
     flex: 1;
@@ -16,7 +30,7 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.7rem;
     margin-left: 33px;
-    color: #fff;
+    color: var(--letter-color);
 }
 nav{
     display: flex;
@@ -42,7 +56,7 @@ nav a, h2{
 /* END HEADER */
 /* START PRESENTATION */
 .presentation{
-    margin: 0;
+    padding-top: 50px;
     width: 100%;
     height: calc(100dvh - 50px);
     background-image: url(images/precentation.jpg);
@@ -61,7 +75,7 @@ nav a, h2{
     backdrop-filter: blur(5px);
 }   
 h1{
-    color: #fff;
+    color: var(--letter-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 100px;
     margin: 0 100%;
@@ -69,7 +83,7 @@ h1{
 
 .presentation p{
     font-size: 30px;
-    color: #fff;
+    color: var(--letter-color);
     text-wrap: pretty;
     text-align: center;
 }
@@ -78,29 +92,100 @@ h1{
 
 /* START INTRODUCTION */
 .Introduction{
+    padding: 40px 30px 20px 30px;
     margin: 0;
     background-color: #222;
 }
 
 .Introduction__content{
+    color: var(--letter-color);
     font-family: sans-serif;
     padding: 20px;
-    width: 50%;
-    margin: 20px;
-    border: 3px solid #2227;
+    width: clamp(300px, 600px, 50%);
+    margin: 20px 9px;
+    border: 7px solid #333  ;
+    box-shadow: 0 5px 9px #5557;
 }
+
+.line{
+    background-color: #fff;
+    width: 100%;
+    height: 1px;
+}
+
 .Introduction__content h2{
+    text-align: center;
     font-size: 2em;
     margin: 0;
 }
+
 .Introduction__content p{
     font-size: 1.1em;
 }
-.content-1{
+
+.Introduction__content:first-child{
     margin-top: 0;
 }
-.content-2{
-    box-sizing: border-box;
+
+.Introduction__content:nth-child(1n){
+    background-color: var(--blue);
     position: relative;
-    right: -48%;
+    right: 0px;
+}
+
+.Introduction__content:nth-child(2n){
+    background-color: var(--orange);
+    position: relative;
+    left: 44%;
+}
+
+/* END INTRODUCTION */
+/* START PLANING */
+
+.planning{
+    box-sizing: border-box;
+    background-color: var(--Backgound-planing);
+    padding: 20px 0;
+}
+
+h3{
+    text-align: center;
+    font-size: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 20px;
+}
+
+.planning h3 , .planning p{
+    margin: 20px 60px;
+    color: var(--letter-color);
+    font-family: sans-serif;
+}
+.planning p{
+    font-size: 19px;
+}
+
+.content__video{
+    max-width: 100%;
+    margin: 40px 0;
+    position: relative;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.content__video video{
+    box-shadow: 0 0 15px #0008;
+    max-width: 100%;
+}
+
+.content__video span{
+    font-size: 40px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: var(--orange);
+}
+
+.content__video span:last-child{
+    color: #00f;
 }
