@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* START HEADER */
+.header{
+    background-color: #111;
+    height: 50px;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+.header h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.7rem;
+    margin-left: 33px;
+    color: #fff;
+}
+nav{
+    display: flex;
+}
+nav a{
+    font-weight: 600;
+    font-size: 1.1rem;
+    font-family: sans-serif;
+    color: #fff;
+    margin: 0 30px;
+    text-decoration: none;
+}
+nav a:last-child{
+    margin-right: 70px;
+}
+
+
+nav a, h2{
+    justify-content: space-between;
+    align-content: center ;
+}
+
+/* END HEADER */
+/* START PRESENTATION */
+.presentation{
+    margin: 0;
+    width: 100%;
+    height: calc(100dvh - 50px);
+    background-image: url(images/precentation.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.d-capa{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    width: 100%;
+    height: calc(100dvh - 50px);
+    background-color: #0009;
+    backdrop-filter: blur(5px);
+}   
+h1{
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 100px;
+    margin: 0 100%;
+}
+
+.presentation p{
+    font-size: 30px;
+    color: #fff;
+    text-wrap: pretty;
+    text-align: center;
+}
+
+/* END PRESENTATION  */
+
+/* START INTRODUCTION */
+.Introduction{
+    margin: 0;
+    background-color: #222;
+}
+
+.Introduction__content{
+    font-family: sans-serif;
+    padding: 20px;
+    width: 50%;
+    margin: 20px;
+    border: 3px solid #2227;
+}
+.Introduction__content h2{
+    font-size: 2em;
+    margin: 0;
+}
+.Introduction__content p{
+    font-size: 1.1em;
+}
+.content-1{
+    margin-top: 0;
+}
+.content-2{
+    box-sizing: border-box;
+    position: relative;
+    right: -48%;
+}
